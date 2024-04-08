@@ -1,3 +1,5 @@
+/* Variables and logic for side scrolling */
+
 const track = document.getElementById("image-track");
 
 const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
@@ -43,3 +45,9 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+/* Prevent vertical scrolling */
+
+document.body.addEventListener('touchmove', function(event) {
+  event.preventDefault();
+}, { passive: false });
