@@ -46,3 +46,33 @@ window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
+
+/* Event listener for image clicks */
+
+const images = document.querySelectorAll('.image');
+
+    images.forEach(image => {
+        image.addEventListener('click', (event) => {
+            if (image.id === "cv") {
+              console.log("cv");
+            }
+            if (image.id === "skills") {
+              console.log("skills");
+            }
+            if (image.id === "goals") {
+              console.log("goals");
+            }
+            if (image.id === "hobbies") {
+              console.log("hobbies");
+            }
+            if (image.id === "personalLife") {
+              console.log("personalLife");
+            }
+            if (image.id === "projectIdeas") {
+              console.log("projectIdeas");
+            }
+            if (image.id === "futurePlans") {
+              console.log("futurePlans");
+            }
+            })
+          });
